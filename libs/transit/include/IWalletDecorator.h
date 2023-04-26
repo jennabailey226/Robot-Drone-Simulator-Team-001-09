@@ -8,12 +8,12 @@ class IWalletDecorator : public IEntity {
     float balance;
     IEntity* entity;
  public:
-    /**
-   * @brief Construct a new Wallet Decorator object
-   *
-   * @param strategy the entity to decorate onto
-   */
-  IWalletDecorator(IEntity* entity);
+//     /**
+//    * @brief Construct a new Wallet Decorator object
+//    *
+//    * @param strategy the entity to decorate onto
+//    */
+//   IWalletDecorator(IEntity* entity);
 
   /**
    * @brief Wallet Destructor
@@ -31,31 +31,64 @@ class IWalletDecorator : public IEntity {
    * @brief Gets the position of the entity.
    * @return The position of the entity.
    */
-  virtual Vector3 GetPosition() const override = 0;
+  virtual Vector3 GetPosition() const override {
+   return this->entity->GetPosition();
+  }
 
   /**
    * @brief Gets the direction of the entity.
    * @return The direction of the entity.
    */
-  virtual Vector3 GetDirection() const override = 0;
+  virtual Vector3 GetDirection() const override {
+   return this->entity->GetDirection();
+  }
 
   /**
    * @brief Gets the destination of the entity.
    * @return The destination of the entity.
    */
-  virtual Vector3 GetDestination() const override = 0;
+  virtual Vector3 GetDestination() const override {
+   return this->entity->GetDestination();
+  }
 
   /**
    * @brief Gets the details of the entity.
    * @return The details of the entity.
    */
-  virtual JsonObject GetDetails() const override = 0;
+  virtual JsonObject GetDetails() const override {
+   return this->entity->GetDetails();
+  }
 
   /**
    * @brief Gets the speed of the entity.
    * @return The speed of the entity.
    */
-  virtual float GetSpeed() const = 0;  
+  virtual float GetSpeed() const {
+   return this->entity->GetSpeed();
+  } 
+
+  /**
+   * @brief Adds money to entity's wallet.
+   * @param The money in dollars to be added.
+   */
+  void balanceAdd(float payment) {
+   balance+=payment;
+  }
+
+  /**
+   * @brief Removes money from the entity's wallet.
+   * @param The money in dollars to be withdrawn.
+   * @return If withdraw was successful (payment removed and balance non-negative).
+   */
+  bool withdraw(float payment) {
+   if (balance-payment < 0) {
+      return false;
+   } else {
+      balance-=payment;
+      return true;
+   }
+  }
+
 };
 
 
