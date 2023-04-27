@@ -3,7 +3,8 @@
 RobotWalletDecorator::RobotWalletDecorator(IEntity* entity) {
     this->entity = entity;
     balance = 20;
-    //Unsure of how entity is created/when robot constructor is called
+    hasPaid = false;
+    //entity is created and wrapped in wallet decorator in SimulationModel.cc
 }
 
 RobotWalletDecorator::~RobotWalletDecorator() {
@@ -11,6 +12,10 @@ RobotWalletDecorator::~RobotWalletDecorator() {
 }
 
 void RobotWalletDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
-    IEntity::Update(dt, scheduler);
     //Added functionality here
+    //if proximity < value and has not paid
+        //withdraw TripCost
+        //if !withdraw  && hasnt already called drone
+            //call money delivery drone
+    IEntity::Update(dt, scheduler);
 }

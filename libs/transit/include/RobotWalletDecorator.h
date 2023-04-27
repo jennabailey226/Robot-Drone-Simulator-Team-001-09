@@ -25,6 +25,9 @@ class RobotWalletDecorator : public IWalletDecorator {
    */
   virtual void Update(double dt, std::vector<IEntity*> scheduler);
 
+ protected:
+  bool hasPaid;
+
 };
 
 #endif
