@@ -4,6 +4,7 @@
 #include "RobotFactory.h"
 #include "HumanFactory.h"
 #include "HelicopterFactory.h"
+#include "RobotWalletDecorator.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -32,9 +33,17 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   JsonArray position = entity["position"];
   std::cout << name << ": " << position << std::endl;
 
-  IEntity* myNewEntity = compFactory->CreateEntity(entity);
-  myNewEntity->SetGraph(graph);
+  IEntity* myNewEntity;
 
+  //Wrap myNewEntity with WalletDecorator depending on type
+  if (type.compare("robot") == 0) {
+    myNewEntity = new RobotWalletDecorator(compFactory->CreateEntity(entity));
+  } else {  //Default / not yet implemented wrappers
+    myNewEntity = compFactory->CreateEntity(entity);
+  }
+
+  myNewEntity->SetGraph(graph);
+  
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);

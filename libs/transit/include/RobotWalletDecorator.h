@@ -24,9 +24,18 @@ class RobotWalletDecorator : public IWalletDecorator {
    * @param scheduler The list of all entities in the system.
    */
   virtual void Update(double dt, std::vector<IEntity*> scheduler);
+  
+  bool getHasPaid() { return hasPaid; }
+
+  bool getNeedsMoney() { return needsMoney; }
+
+  void setHasPaid(bool update) { hasPaid = update; } 
+
+  void setNeedsMoney(bool update) { needsMoney = update; }
 
  protected:
   bool hasPaid;
+  bool needsMoney;
 
 };
 

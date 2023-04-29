@@ -7,9 +7,7 @@ RobotWalletDecorator::RobotWalletDecorator(IEntity* entity) {
     //entity is created and wrapped in wallet decorator in SimulationModel.cc
 }
 
-RobotWalletDecorator::~RobotWalletDecorator() {
-    delete entity;
-}
+RobotWalletDecorator::~RobotWalletDecorator() {}
 
 void RobotWalletDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
     //Added functionality here

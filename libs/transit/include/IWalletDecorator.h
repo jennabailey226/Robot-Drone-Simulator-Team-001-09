@@ -18,7 +18,7 @@ class IWalletDecorator : public IEntity {
   /**
    * @brief Wallet Destructor
    */
-  ~IWalletDecorator();
+  ~IWalletDecorator() { delete entity; }
 
   /**
    * @brief Updates the entity's position in the physical system, with added functionality from Wallet Decorator.

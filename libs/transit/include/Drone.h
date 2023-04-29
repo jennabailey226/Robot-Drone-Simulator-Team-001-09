@@ -126,7 +126,7 @@ class Drone : public IEntity {
   Drone(const Drone& drone) = delete;
   Drone& operator=(const Drone& drone) = delete;
 
- private:
+ protected:   //Modified from private to allow for interaction with ATMDrones
   JsonObject details;
   Vector3 position;
   Vector3 direction;
