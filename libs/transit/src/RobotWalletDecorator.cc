@@ -1,11 +1,5 @@
 #include "RobotWalletDecorator.h" 
-
-RobotWalletDecorator::RobotWalletDecorator(IEntity* entity) {
-    this->entity = entity;
-    balance = 20;
-    hasPaid = false;
-    //entity is created and wrapped in wallet decorator in SimulationModel.cc
-}
+#include <iostream>
 
 RobotWalletDecorator::~RobotWalletDecorator() {}
 

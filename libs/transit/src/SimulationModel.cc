@@ -35,13 +35,9 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
 
   IEntity* myNewEntity;
 
-  //Wrap myNewEntity with WalletDecorator depending on type
-  if (type.compare("robot") == 0) {
-    myNewEntity = new RobotWalletDecorator(compFactory->CreateEntity(entity));
-  } else {  //Default / not yet implemented wrappers
-    myNewEntity = compFactory->CreateEntity(entity);
-  }
+  myNewEntity = compFactory->CreateEntity(entity);
 
+  std::cout << "SimulationModel.cc:45" << std::endl;
   myNewEntity->SetGraph(graph);
   
   // Call AddEntity to add it to the view

@@ -8,12 +8,15 @@ class IWalletDecorator : public IEntity {
     float balance;
     IEntity* entity;
  public:
-//     /**
-//    * @brief Construct a new Wallet Decorator object
-//    *
-//    * @param strategy the entity to decorate onto
-//    */
-//   IWalletDecorator(IEntity* entity);
+    /**
+   * @brief Construct a new Wallet Decorator object
+   *
+   * @param strategy the entity to decorate onto
+   */
+  IWalletDecorator(IEntity* entity) {
+   this->entity = entity;
+   balance = 0;
+  }
 
   /**
    * @brief Wallet Destructor

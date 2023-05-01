@@ -11,7 +11,11 @@ class RobotWalletDecorator : public IWalletDecorator {
    *
    * @param entity the robot entity to decorate onto
    */
-  RobotWalletDecorator(IEntity* entity);
+  RobotWalletDecorator(IEntity* entity) : IWalletDecorator(entity) {
+    balance = 20;
+    hasPaid = false;
+    //entity is created in SimulationModel.cc and wrapped in wallet decorator in RobotFactory.cc
+  };
 
     /**
    * @brief Wallet Destructor
@@ -32,6 +36,8 @@ class RobotWalletDecorator : public IWalletDecorator {
   void setHasPaid(bool update) { hasPaid = update; } 
 
   void setNeedsMoney(bool update) { needsMoney = update; }
+
+  std::string GetStrategyName() const { return entity->GetStrategyName(); }
 
  protected:
   bool hasPaid;
