@@ -36,7 +36,7 @@ class PaymentStation : public IEntity {
    * @brief Gets the destination of the payment station (it's current position).
    * @return The destination of the payment station.
    */
-  Vector3 GetDestination() const { return destination; }
+  Vector3 GetDestination() const { return position; }
 
   /**
    * @brief Gets the details of the payment station.
@@ -73,6 +73,7 @@ class PaymentStation : public IEntity {
   Vector3 position;
   Vector3 direction;
   bool available;
+  Bank bank;
 };
 
 #endif
