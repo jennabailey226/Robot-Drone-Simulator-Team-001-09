@@ -37,7 +37,6 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
 
   myNewEntity = compFactory->CreateEntity(entity);
 
-  std::cout << "SimulationModel.cc:45" << std::endl;
   myNewEntity->SetGraph(graph);
   
   // Call AddEntity to add it to the view

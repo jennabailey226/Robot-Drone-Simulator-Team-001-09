@@ -2,7 +2,7 @@
 #define PAYMENT_STATION_H_
 
 #include "IEntity.h"
-#include "Bank.h"
+#include "BankAccount.h"
 
 /**
  * @class PaymentStation
