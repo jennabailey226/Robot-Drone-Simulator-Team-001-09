@@ -2,6 +2,7 @@
 #define BANK_H_
 
 #include "PaymentStation.h"
+#include "BankAccountWalletDecorator.h"
 
 /**
  * @class Bank
@@ -13,19 +14,19 @@ class Bank : public PaymentStation {
    * @brief Banks are created
    * @param obj JSON object containing the Bank's information
    */
-  Bank(JsonObject& obj);
+  Bank(JsonObject& obj) : PaymentStation(obj) { bank = this; }
 
   /**
    * @brief Destructor.
    */
-  ~Bank();
+  ~Bank() {}
 
-  void AddAccount(std::string name, std::string password);
+  void AddAccount(std::string accountName);
 
-  void DeleteAccount()
+  BankAccountWalletDecorator& AccessAccount(std::string accountName);
 
  private:
-  std::vector<BankAccount> accounts;
+  std::vector<BankAccountWalletDecorator&> accounts;
 };
 
 #endif

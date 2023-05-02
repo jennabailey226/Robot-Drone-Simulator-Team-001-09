@@ -48,3 +48,7 @@ void ATMDrone::GetNearestEntity(std::vector<IEntity*> scheduler) {  //is overrid
       toFinalDestination = new BeelineStrategy(destination, finalDestination);
   }
 }
+
+void ATMDrone::Update(double dt, std::vector<IEntity*> scheduler) {
+  
+}

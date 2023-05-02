@@ -1,7 +1,8 @@
-#ifndef PAYMENTSTATION_H_
-#define PAYMENTSTATION_H_
+#ifndef PAYMENT_STATION_H_
+#define PAYMENT_STATION_H_
 
 #include "IEntity.h"
+#include "Bank.h"
 
 /**
  * @class PaymentStation
@@ -18,7 +19,7 @@ class PaymentStation : public IEntity {
   /**
    * @brief Destructor.
    */
-  ~PaymentStation();
+  ~PaymentStation() {}
 
   /**
    * @brief Gets the position of the payment station.
@@ -54,7 +55,7 @@ class PaymentStation : public IEntity {
    * @brief Gets the availability of the payment station for use.
    * @return The availability of the payment station.
    */
-  bool GetAvailability() const { return availability; }
+  bool GetAvailability() const { return available; }
 
   /**
    * @brief Get the Strategy Name (none)
@@ -66,14 +67,18 @@ class PaymentStation : public IEntity {
    * @brief Sets the availability of the payment station.
    * @param choice The desired availability of the payment station.
    */
-  void SetAvailability(bool choice) { availability = choice; }
+  void SetAvailability(bool choice) { available = choice; }
+
+  void AddAccount(std::string accountName);
+
+  BankAccount* AccessAccount(std::string accountName);
 
  private:
   JsonObject details;
   Vector3 position;
   Vector3 direction;
   bool available;
-  Bank bank;
+  std::vector<BankAccount*> accounts;
 };
 
 #endif

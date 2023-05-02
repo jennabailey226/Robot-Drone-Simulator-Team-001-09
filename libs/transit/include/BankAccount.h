@@ -1,52 +1,50 @@
 #ifndef BANKACCOUNT_H_
 #define BANKACCOUNT_H_
 
-#include "IEntity.h"
+#include "IWalletDecorator.h"
 
 /**
  * @class BankAccount
  * @brief Represents a bank account.
  */
-class BankAccount : public IEntity {
+class BankAccount : public IWalletDecorator {
  public:
   /**
    * @brief Bank accounts are created
    * @param name the name the account is under
-   * @param pw the password to access the account
    */
-  BankAccount(std::string name, std::string pw) {
+  BankAccount(std::string name) : IWalletDecorator(nullptr) {
     accountName = name;
-    password = pw;
   }
 
   /**
    * @brief Destructor.
    */
-  ~BankAccount();
+  ~BankAccount() {}
 
   /**
    * @brief BankAccounts do not have a position
    * @return none - bank accounts are non-physical entities.
    */
-  Vector3 GetPosition() const { return none; }
+  Vector3 GetPosition() const { return noPos; }
 
   /**
    * @brief BankAccounts do not have direction
    * @return none - bank accounts are non-physical entities.
    */
-  Vector3 GetDirection() const { return none; }
+  Vector3 GetDirection() const { return noPos; }
 
   /**
    * @brief BankAccounts do not have a destination
    * @return none - bank accounts are non-physical entities.
    */
-  Vector3 GetDestination() const { return none; }
+  Vector3 GetDestination() const { return noPos; }
 
   /**
    * @brief Gets the details of the bank account.
    * @return The details of the bank account.
    */
-  JsonObject GetDetails() const { return none; }
+  JsonObject GetDetails() const { return noDetails; }
 
   /**
    * @brief Gets the speed of the bank account (0).
@@ -66,11 +64,12 @@ class BankAccount : public IEntity {
    */
   std::string GetStrategyName() const { return ""; }
 
-  bool CheckPassword(std::string pw) { return pw == password; }
+  std::string GetAccountName() const { return accountName; }
 
  private:
-  std::string password;
   std::string accountName;
+  Vector3 noPos;
+  JsonObject noDetails;
 };
 
 #endif
