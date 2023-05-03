@@ -4,7 +4,8 @@
 DroneWalletDecorator::~DroneWalletDecorator() {}
 
 void DroneWalletDecorator::GetNearestEntity(std::vector<IEntity*> scheduler) {
-    //if balance > 100
+    Drone * ent = dynamic_cast<Drone*>(entity);
+    ent->GetNearestEntity(scheduler);
     // if (this->balance < 100) {
     //     //select an ATM as the nearest entity to go drop off money
     //     float minDis = std::numeric_limits<float>::max();
@@ -19,8 +20,8 @@ void DroneWalletDecorator::GetNearestEntity(std::vector<IEntity*> scheduler) {
     //         }
     //     }
     // }
-    //Otherwise find non-atm entity to route towards
-    //Drone::GetNearestEntity(scheduler);
+    // Otherwise find non-atm entity to route towards
+    // Drone::GetNearestEntity(scheduler);
 
 }
 

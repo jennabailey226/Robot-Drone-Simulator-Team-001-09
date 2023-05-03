@@ -1,10 +1,4 @@
 #include "ATMDrone.h"
-#include "AstarStrategy.h"
-#include "BeelineStrategy.h"
-#include "DfsStrategy.h"
-#include "DijkstraStrategy.h"
-#include "JumpDecorator.h"
-#include "SpinDecorator.h"
 #include "RobotWalletDecorator.h"
 #include <iostream>
 

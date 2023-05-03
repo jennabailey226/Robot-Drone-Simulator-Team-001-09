@@ -4,12 +4,6 @@
 #include <cmath>
 #include <limits>
 
-#include "AstarStrategy.h"
-#include "BeelineStrategy.h"
-#include "DfsStrategy.h"
-#include "DijkstraStrategy.h"
-#include "JumpDecorator.h"
-#include "SpinDecorator.h"
 
 Drone::Drone(JsonObject& obj) : details(obj) {
   JsonArray pos(obj["position"]);
@@ -141,4 +135,8 @@ bool Drone::AtFinalDestination() {
 
 IEntity* Drone::ReturnNearestEntity() {
   return nearestEntity;
+}
+
+void Drone::SetNearestEntity(IEntity* nearEntity) {
+  nearestEntity = nearEntity;
 }

@@ -4,13 +4,14 @@
 #include "RobotFactory.h"
 #include "HumanFactory.h"
 #include "HelicopterFactory.h"
-#include "RobotWalletDecorator.h"
 #include "PaymentStationFactory.h"
+#include "ATMDroneFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
   compFactory = new CompositeFactory();
   AddFactory(new DroneFactory());
+  AddFactory(new ATMDroneFactory());
   AddFactory(new RobotFactory());
   AddFactory(new HumanFactory());
   AddFactory(new HelicopterFactory());

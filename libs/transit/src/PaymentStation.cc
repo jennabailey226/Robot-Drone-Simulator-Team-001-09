@@ -29,7 +29,8 @@ bool PaymentStation::Deposit(float amount, std::string accountName, IWalletDecor
     for (auto account : accounts) {
         if (account->GetAccountName() == accountName) {
             if (wallet->withdraw(amount)) {
-                account->deposit(amount);
+                account->deposit(amount*0.95);
+                accounts.at(0)->deposit(amount*0.05); //ATM Fee
                 return true;
             }
             else {
@@ -46,7 +47,8 @@ bool PaymentStation::Withdraw(float amount, std::string accountName, IWalletDeco
     for (auto account : accounts) {
         if (account->GetAccountName() == accountName) {
             if (account->withdraw(amount)) {
-                wallet->deposit(amount);
+                wallet->deposit(amount*0.95);
+                accounts.at(0)->deposit(amount*0.05); //ATM Fee
                 return true;
             }
             else {
@@ -58,16 +60,6 @@ bool PaymentStation::Withdraw(float amount, std::string accountName, IWalletDeco
     std::cout << "No account found" << std::endl;
     return false;
 }
-
-// BankAccount* PaymentStation::AccessAccount(std::string accountName) {
-//     for (auto account : accounts) {
-//         if (account->GetAccountName() == accountName) {
-//             return account;
-//         }
-//     }
-//     std::cout << "No account found" << std::endl;
-//     return nullptr;
-// }
 
 
 

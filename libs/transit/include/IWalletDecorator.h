@@ -166,7 +166,7 @@ class IWalletDecorator : public IEntity {
    */
   virtual void Jump(double height) { entity->Jump(height); }
 
-  virtual float Random(float Min, float Max) { entity->Random(Min, Max); }
+  virtual float Random(float Min, float Max) { return entity->Random(Min, Max); }
 
 
 

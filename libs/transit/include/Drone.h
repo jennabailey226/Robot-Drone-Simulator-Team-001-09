@@ -6,6 +6,12 @@
 #include "IEntity.h"
 #include "IStrategy.h"
 #include "math/vector3.h"
+#include "AstarStrategy.h"
+#include "BeelineStrategy.h"
+#include "DfsStrategy.h"
+#include "DijkstraStrategy.h"
+#include "JumpDecorator.h"
+#include "SpinDecorator.h"
 
 // Represents a drone in a physical system.
 // Drones move using euler integration based on a specified

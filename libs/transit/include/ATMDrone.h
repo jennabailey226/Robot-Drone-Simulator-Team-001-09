@@ -24,6 +24,8 @@ class ATMDrone : public Drone {
    */
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
+  IEntity* GetRobo() { return robo; }
+
 private:
  IEntity* robo = nullptr;
 };

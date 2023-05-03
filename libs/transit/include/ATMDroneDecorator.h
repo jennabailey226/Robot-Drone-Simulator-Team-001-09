@@ -2,6 +2,8 @@
 #define ATM_DRONE_DECORATOR_H_
 
 #include "ATMDrone.h"
+#include "PaymentStation.h"
+#include "RobotWalletDecorator.h"
 #include "IWalletDecorator.h"
 
 class ATMDroneDecorator : public IWalletDecorator {
