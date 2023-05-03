@@ -126,6 +126,15 @@ class Drone : public IEntity {
   Drone(const Drone& drone) = delete;
   Drone& operator=(const Drone& drone) = delete;
 
+  bool AtInitialDestination();
+
+  bool AtFinalDestination();
+
+  IEntity* ReturnNearestEntity();
+
+  void SetNearestEntity(IEntity* nearEntity);
+
+
  protected:   //Modified from private to allow for interaction with ATMDrones
   JsonObject details;
   Vector3 position;
@@ -137,6 +146,8 @@ class Drone : public IEntity {
   float speed;
   bool available;
   bool pickedUp;
+  bool atFirst;
+  bool atFinal;
   IEntity* nearestEntity = nullptr;
   IStrategy* toRobot = nullptr;
   IStrategy* toFinalDestination = nullptr;

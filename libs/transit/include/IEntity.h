@@ -151,6 +151,14 @@ class IEntity {
    */
   virtual void Jump(double height) {}
 
+  virtual bool AtInitialDestination();
+
+  virtual bool AtFinalDestination();
+
+  virtual IEntity* ReturnNearestEntity();
+
+  virtual void SetNearestEntity(IEntity* nearEntity);
+
   virtual float Random(float Min, float Max) {
     return ((float(rand()) / float(RAND_MAX)) * (Max - Min)) + Min;
   }

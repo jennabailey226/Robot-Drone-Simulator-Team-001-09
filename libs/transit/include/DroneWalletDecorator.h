@@ -21,11 +21,23 @@ class DroneWalletDecorator : public IWalletDecorator {
   ~DroneWalletDecorator();
   
   /**
+   * @brief Gets the nearest entity in the scheduler
+   * @param scheduler Vector containing all the entities in the system
+   */
+  void GetNearestEntity(std::vector<IEntity*> scheduler);
+
+  /**
    * @brief Updates the entity's position in the physical system, with added functionality from Wallet Decorator.
    * @param dt The time step of the update.
    * @param scheduler The list of all entities in the system.
    */
   void Update(double dt, std::vector<IEntity*> scheduler);
+
+  float TripCost(Vector3 start, Vector3 end);
+
+  IEntity* ReturnNearestEntity() { return entity->ReturnNearestEntity(); }
+
+  void SetNearestEntity(IEntity* nearEntity) { entity->SetNearestEntity(nearEntity); }
 
 };
 

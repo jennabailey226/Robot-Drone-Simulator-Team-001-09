@@ -37,7 +37,7 @@ class RobotWalletDecorator : public IWalletDecorator {
 
   void setNeedsMoney(bool update) { needsMoney = update; }
 
-  std::string GetStrategyName() const { return entity->GetStrategyName(); }
+  //std::string GetStrategyName() const { return entity->GetStrategyName(); }
 
  protected:
   bool hasPaid;

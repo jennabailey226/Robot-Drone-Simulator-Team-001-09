@@ -71,7 +71,11 @@ class PaymentStation : public IEntity {
 
   void AddAccount(std::string accountName);
 
-  BankAccount* AccessAccount(std::string accountName);
+  // BankAccount* AccessAccount(std::string accountName);
+
+  bool Deposit(float amount, std::string accountName, IWalletDecorator* wallet);
+
+  bool Withdraw(float amount, std::string accountName, IWalletDecorator* wallet);
 
  private:
   JsonObject details;

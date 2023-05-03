@@ -20,6 +20,8 @@ Drone::Drone(JsonObject& obj) : details(obj) {
   speed = obj["speed"];
 
   available = true;
+  atFinal = false;
+  atFirst = false;
 }
 
 Drone::~Drone() {
@@ -33,9 +35,10 @@ Drone::~Drone() {
 void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
   float minDis = std::numeric_limits<float>::max();
   for (auto entity : scheduler) {
-    if (entity->GetAvailability()) {
+    std::string type = entity->GetDetails()["type"];
+    if (entity->GetAvailability() && type.compare("paymentStation") != 0) {
       float disToEntity = this->position.Distance(entity->GetPosition());
-      if (disToEntity <= minDis) {
+      if (disToEntity <= minDis ) {
         minDis = disToEntity;
         nearestEntity = entity;
       }
@@ -47,6 +50,7 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
     nearestEntity->SetAvailability(false);
     available = false;
     pickedUp = false;
+    atFinal = false;
 
     destination = nearestEntity->GetPosition();
     Vector3 finalDestination = nearestEntity->GetDestination();
@@ -79,8 +83,14 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       delete toRobot;
       toRobot = nullptr;
       pickedUp = true;
+      atFirst = true;
     }
   } else if (toFinalDestination) {
+
+    if (atFirst) {
+      atFirst = false;
+    }
+
     toFinalDestination->Move(this, dt);
 
     if (nearestEntity && pickedUp) {
@@ -94,6 +104,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       nearestEntity = nullptr;
       available = true;
       pickedUp = false;
+      atFinal = true;
     }
   }
 }
@@ -118,4 +129,16 @@ void Drone::Jump(double height) {
       goUp = true;
     }
   }
+}
+
+bool Drone::AtInitialDestination() {
+  return atFirst;
+}
+
+bool Drone::AtFinalDestination() {
+  return atFinal;
+}
+
+IEntity* Drone::ReturnNearestEntity() {
+  return nearestEntity;
 }

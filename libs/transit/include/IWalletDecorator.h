@@ -74,7 +74,7 @@ class IWalletDecorator : public IEntity {
    * @brief Adds money to entity's wallet.
    * @param The money in dollars to be added.
    */
-  void balanceAdd(float payment) {
+  void deposit(float payment) {
    balance+=payment;
   }
 
@@ -91,6 +91,84 @@ class IWalletDecorator : public IEntity {
       return true;
    }
   }
+
+  /**
+   * @brief Gets the color of the drone
+   * @return The color of the drone
+   */
+  virtual std::string GetColor() const { return entity->GetColor(); }
+
+  /**
+   * @brief Gets the availability of the entity.
+   * @return The availability of the entity.
+   */
+  virtual bool GetAvailability() const { return entity->GetAvailability(); }
+
+  /**
+   * @brief Get the Strategy Name
+   *
+   * @return Streategy name
+   */
+  virtual std::string GetStrategyName() const { return entity->GetStrategyName(); }
+
+  /**
+   * @brief Set the Strategy Name
+   *
+   * @param strategyName_ Strategy name
+   */
+  virtual void SetStrategyName(std::string strategyName_) { entity->SetStrategyName(strategyName_); }
+
+  /**
+   * @brief Sets the availability of the entity.
+   * @param choice The desired availability of the entity.
+   */
+  virtual void SetAvailability(bool choice) { entity->SetAvailability(choice); }
+
+  /**
+   * @brief Sets the graph object used by the entity in the simulation.
+   * @param graph The IGraph object to be used.
+   */
+  void SetGraph(const IGraph* graph) { entity->SetGraph(graph); }
+
+  /**
+   * @brief Sets the position of the entity.
+   * @param pos_ The desired position of the entity.
+   */
+  virtual void SetPosition(Vector3 pos_) { entity->SetPosition(pos_); }
+
+  /**
+   *@brief Set the direction of the entity.
+   *@param dir_ The new direction of the entity.
+   */
+  virtual void SetDirection(Vector3 dir_) { entity->SetDirection(dir_); }
+
+  /**
+   *@brief Set the destination of the entity.
+   *@param des_ The new destination of the entity.
+   */
+  virtual void SetDestination(Vector3 des_) { entity->SetDestination(des_); }
+
+  /**
+   * @brief Sets the color of the drone
+   * @param col_ The new color of the drone
+   */
+  virtual void SetColor(std::string col_) { entity->SetColor(col_); }
+
+  /**
+   * @brief Rotate the entity.
+   * @param angle The angle to rotate the entity by.
+   */
+  virtual void Rotate(double angle) { entity->Rotate(angle); }
+
+  /**
+   * @brief Make the entity jump.
+   * @param height The height to make the entity jump.
+   */
+  virtual void Jump(double height) { entity->Jump(height); }
+
+  virtual float Random(float Min, float Max) { entity->Random(Min, Max); }
+
+
 
 };
 
