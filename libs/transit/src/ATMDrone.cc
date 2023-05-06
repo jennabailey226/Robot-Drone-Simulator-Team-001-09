@@ -5,33 +5,36 @@
 ATMDrone::ATMDrone(JsonObject& obj): Drone(obj) {}
 
 void ATMDrone::GetNearestEntity(std::vector<IEntity*> scheduler) {  //is override needed here?
-  float minDis = std::numeric_limits<float>::max();
-  for (auto entity : scheduler) {
-    std::string type = entity->GetDetails()["type"];
-    RobotWalletDecorator* ent = dynamic_cast<RobotWalletDecorator*>(entity); //Dynamic type cast 
-    if (entity->GetAvailability()) {
-      if (ent->getNeedsMoney()) {
-        robo = entity;
-      }
-      if (type.compare("paymentStation") == 0) {
-        float disToEntity = this->position.Distance(entity->GetPosition());
-        if (disToEntity <= minDis) {
-          minDis = disToEntity;
-          nearestEntity = entity;
-        }
-      }
+  nearestEntity = nullptr;
+  robo = nullptr;
+  pickedUp = false;
+  atFinal = false;
+  available = true;
+
+  float minDisRob = std::numeric_limits<float>::max();
+  float minDisPS = std::numeric_limits<float>::max();
+  for (auto ent : scheduler) {
+    std::string type = ent->GetDetails()["type"];
+    float disToEntity = this->position.Distance(ent->GetPosition());
+    RobotWalletDecorator* rob = dynamic_cast<RobotWalletDecorator*>(ent); //Dynamic type cast 
+    if (type.compare("robot") == 0 && rob->GetNeedsMoney() && disToEntity <= minDisRob) {
+      robo = ent;
+      minDisRob = disToEntity;
+    }
+    if (type.compare("paymentStation") == 0 && disToEntity <= minDisPS) {
+      minDisPS = disToEntity;
+      nearestEntity = ent;
     }
   }
 
-  if (nearestEntity) {
+  if (nearestEntity && robo) {
       // set availability to the nearest entity
     nearestEntity->SetAvailability(false);
     available = false;
-    pickedUp = false;
-    atFinal = false;
 
     destination = nearestEntity->GetPosition();
     Vector3 finalDestination = robo->GetPosition();
     toRobot = new BeelineStrategy(position, destination);
+    toFinalDestination = new BeelineStrategy(destination, finalDestination);
   }
 }

@@ -1,0 +1,232 @@
+\hypertarget{classBankAccount}{}\doxysection{Bank\+Account Class Reference}
+\label{classBankAccount}\index{BankAccount@{BankAccount}}
+
+
+Represents a bank account.  
+
+
+
+
+{\ttfamily \#include $<$Bank\+Account.\+h$>$}
+
+
+
+Inheritance diagram for Bank\+Account\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classBankAccount__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bank\+Account\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classBankAccount__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBankAccount_a91b7c93cb51627e71e08b7e0a7ebe3f7}{Bank\+Account}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Bank accounts are created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBankAccount_af8ff84fe814689a9a6e74c5ae36761d8}\label{classBankAccount_af8ff84fe814689a9a6e74c5ae36761d8}} 
+\mbox{\hyperlink{classBankAccount_af8ff84fe814689a9a6e74c5ae36761d8}{$\sim$\+Bank\+Account}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBankAccount_a44d0c581e259f29068e579c53e6fd908}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Bank\+Accounts do not have a position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBankAccount_a1a77b2769056f18c6f0b6131d6670822}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Bank\+Accounts do not have direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBankAccount_a0092d3fa4d884ae9e507a73f069ed5fa}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Bank\+Accounts do not have a destination. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classBankAccount_a55a53564450796083f67934442cea07e}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the details of the bank account. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBankAccount_abf1c071009aa3e1e8239b3a0af3aca8d}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the bank account (0). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBankAccount_ad8888a45abfbb49f5424dd29adadf2f0}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Gets the availability of the bank account. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBankAccount_aa87d126298dfe46e067c4fad03b634f5}{Get\+Strategy\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the Strategy Name (none) \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBankAccount_aa4a874cfb4a78490a22eb8f562d1dcbb}{Get\+Account\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the account name of a bank account. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBankAccount_acc75da75fd41d4c20d7e9218556dcb82}{Get\+Balance}} ()
+\begin{DoxyCompactList}\small\item\em Get the balance of a bank account. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a bank account. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBankAccount_a91b7c93cb51627e71e08b7e0a7ebe3f7}\label{classBankAccount_a91b7c93cb51627e71e08b7e0a7ebe3f7}} 
+\index{BankAccount@{BankAccount}!BankAccount@{BankAccount}}
+\index{BankAccount@{BankAccount}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{BankAccount()}{BankAccount()}}
+{\footnotesize\ttfamily Bank\+Account\+::\+Bank\+Account (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bank accounts are created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name the account is under \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBankAccount_aa4a874cfb4a78490a22eb8f562d1dcbb}\label{classBankAccount_aa4a874cfb4a78490a22eb8f562d1dcbb}} 
+\index{BankAccount@{BankAccount}!GetAccountName@{GetAccountName}}
+\index{GetAccountName@{GetAccountName}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetAccountName()}{GetAccountName()}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::\+Get\+Account\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the account name of a bank account. 
+
+\begin{DoxyReturn}{Returns}
+the account name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBankAccount_ad8888a45abfbb49f5424dd29adadf2f0}\label{classBankAccount_ad8888a45abfbb49f5424dd29adadf2f0}} 
+\index{BankAccount@{BankAccount}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Bank\+Account\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the availability of the bank account. 
+
+\begin{DoxyReturn}{Returns}
+false -\/ Bank accounts do not have availability. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_aff3296c532d4d277da0cd5be1db23522}{I\+Wallet\+Decorator}}.
+
+\mbox{\Hypertarget{classBankAccount_acc75da75fd41d4c20d7e9218556dcb82}\label{classBankAccount_acc75da75fd41d4c20d7e9218556dcb82}} 
+\index{BankAccount@{BankAccount}!GetBalance@{GetBalance}}
+\index{GetBalance@{GetBalance}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetBalance()}{GetBalance()}}
+{\footnotesize\ttfamily float Bank\+Account\+::\+Get\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the balance of a bank account. 
+
+\begin{DoxyReturn}{Returns}
+The balance of the bank account 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBankAccount_a0092d3fa4d884ae9e507a73f069ed5fa}\label{classBankAccount_a0092d3fa4d884ae9e507a73f069ed5fa}} 
+\index{BankAccount@{BankAccount}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Bank\+Account\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Bank\+Accounts do not have a destination. 
+
+\begin{DoxyReturn}{Returns}
+none -\/ bank accounts are non-\/physical entities. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_a6cabe91d00678de08204ed0a40aafd59}{I\+Wallet\+Decorator}}.
+
+\mbox{\Hypertarget{classBankAccount_a55a53564450796083f67934442cea07e}\label{classBankAccount_a55a53564450796083f67934442cea07e}} 
+\index{BankAccount@{BankAccount}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Bank\+Account\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the details of the bank account. 
+
+\begin{DoxyReturn}{Returns}
+The details of the bank account. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_a95f5d8aa9c338d3b8f742e12ebb929e3}{I\+Wallet\+Decorator}}.
+
+\mbox{\Hypertarget{classBankAccount_a1a77b2769056f18c6f0b6131d6670822}\label{classBankAccount_a1a77b2769056f18c6f0b6131d6670822}} 
+\index{BankAccount@{BankAccount}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Bank\+Account\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Bank\+Accounts do not have direction. 
+
+\begin{DoxyReturn}{Returns}
+none -\/ bank accounts are non-\/physical entities. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_a8e2d95ca34ddb6bcc37e6d71642633cc}{I\+Wallet\+Decorator}}.
+
+\mbox{\Hypertarget{classBankAccount_a44d0c581e259f29068e579c53e6fd908}\label{classBankAccount_a44d0c581e259f29068e579c53e6fd908}} 
+\index{BankAccount@{BankAccount}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Bank\+Account\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Bank\+Accounts do not have a position. 
+
+\begin{DoxyReturn}{Returns}
+none -\/ bank accounts are non-\/physical entities. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_a82592f0a2fd64037dfc1ee11e0875f9f}{I\+Wallet\+Decorator}}.
+
+\mbox{\Hypertarget{classBankAccount_abf1c071009aa3e1e8239b3a0af3aca8d}\label{classBankAccount_abf1c071009aa3e1e8239b3a0af3aca8d}} 
+\index{BankAccount@{BankAccount}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Bank\+Account\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the bank account (0). 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ bank accounts are not physical entities. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_a1d494013aaf2bfa0bbe9aaf3765c111f}{I\+Wallet\+Decorator}}.
+
+\mbox{\Hypertarget{classBankAccount_aa87d126298dfe46e067c4fad03b634f5}\label{classBankAccount_aa87d126298dfe46e067c4fad03b634f5}} 
+\index{BankAccount@{BankAccount}!GetStrategyName@{GetStrategyName}}
+\index{GetStrategyName@{GetStrategyName}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{GetStrategyName()}{GetStrategyName()}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::\+Get\+Strategy\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Strategy Name (none) 
+
+\begin{DoxyReturn}{Returns}
+Strategy name (none) 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_a768b39345d996e9e32d6d1cc7ccf5df2}{I\+Wallet\+Decorator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/include/Bank\+Account.\+h\end{DoxyCompactItemize}

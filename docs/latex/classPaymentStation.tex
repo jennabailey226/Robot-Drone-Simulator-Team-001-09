@@ -1,0 +1,233 @@
+\hypertarget{classPaymentStation}{}\doxysection{Payment\+Station Class Reference}
+\label{classPaymentStation}\index{PaymentStation@{PaymentStation}}
+
+
+Represents a payment station in a physical system.  
+
+
+
+
+{\ttfamily \#include $<$Payment\+Station.\+h$>$}
+
+
+
+Inheritance diagram for Payment\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classPaymentStation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Payment\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classPaymentStation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPaymentStation_a463cef46df30048ef36ae0692d30e01d}{Payment\+Station}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Payment stations are created with a position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPaymentStation_ae49038dfb1c1abe2ff822de6bedc8090}\label{classPaymentStation_ae49038dfb1c1abe2ff822de6bedc8090}} 
+\mbox{\hyperlink{classPaymentStation_ae49038dfb1c1abe2ff822de6bedc8090}{$\sim$\+Payment\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classPaymentStation_aa81e8c3547f10a4025e4b0ec18ae5288}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the payment station. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classPaymentStation_a495f4940ef565fde8456eec37f34b2ce}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction the payment station is facing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classPaymentStation_a40b79d8d1f1402263628db87af47cd03}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the destination of the payment station (it\textquotesingle{}s current position). \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classPaymentStation_a100fb2e766940b6aeee4eb95bfd21ac1}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the details of the payment station. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPaymentStation_ae2b4a5d4ad6d59eecd93001319211df3}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the payment station (0). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPaymentStation_a92fdd025b3eb9c9be3a1db96cf9de9ee}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Gets the availability of the payment station for use. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPaymentStation_a4f30ed5f01ff0305731dc98634ac6485}{Get\+Strategy\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the Strategy Name (none) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPaymentStation_a9d526e2136158e06882cefda8b5e1c0c}{Set\+Availability}} (bool choice)
+\begin{DoxyCompactList}\small\item\em Sets the availability of the payment station. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPaymentStation_a818f63fdb8ad3eb7c715d7277047f8aa}\label{classPaymentStation_a818f63fdb8ad3eb7c715d7277047f8aa}} 
+void {\bfseries Add\+Account} (std\+::string account\+Name)
+\item 
+\mbox{\Hypertarget{classPaymentStation_ac3f54874bd81e2f072f63b1ecc2fe6f7}\label{classPaymentStation_ac3f54874bd81e2f072f63b1ecc2fe6f7}} 
+bool {\bfseries Deposit} (float amount, std\+::string account\+Name, \mbox{\hyperlink{classIWalletDecorator}{I\+Wallet\+Decorator}} $\ast$wallet)
+\item 
+\mbox{\Hypertarget{classPaymentStation_af836c941be2459b72310e2b7acd515f7}\label{classPaymentStation_af836c941be2459b72310e2b7acd515f7}} 
+bool {\bfseries Withdraw} (float amount, std\+::string account\+Name, \mbox{\hyperlink{classIWalletDecorator}{I\+Wallet\+Decorator}} $\ast$wallet)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a payment station in a physical system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPaymentStation_a463cef46df30048ef36ae0692d30e01d}\label{classPaymentStation_a463cef46df30048ef36ae0692d30e01d}} 
+\index{PaymentStation@{PaymentStation}!PaymentStation@{PaymentStation}}
+\index{PaymentStation@{PaymentStation}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{PaymentStation()}{PaymentStation()}}
+{\footnotesize\ttfamily Payment\+Station\+::\+Payment\+Station (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Payment stations are created with a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & J\+S\+ON object containing the payment station\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPaymentStation_a92fdd025b3eb9c9be3a1db96cf9de9ee}\label{classPaymentStation_a92fdd025b3eb9c9be3a1db96cf9de9ee}} 
+\index{PaymentStation@{PaymentStation}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Payment\+Station\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the availability of the payment station for use. 
+
+\begin{DoxyReturn}{Returns}
+The availability of the payment station. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_a40b79d8d1f1402263628db87af47cd03}\label{classPaymentStation_a40b79d8d1f1402263628db87af47cd03}} 
+\index{PaymentStation@{PaymentStation}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Payment\+Station\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the destination of the payment station (it\textquotesingle{}s current position). 
+
+\begin{DoxyReturn}{Returns}
+The destination of the payment station. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_a100fb2e766940b6aeee4eb95bfd21ac1}\label{classPaymentStation_a100fb2e766940b6aeee4eb95bfd21ac1}} 
+\index{PaymentStation@{PaymentStation}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Payment\+Station\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the details of the payment station. 
+
+\begin{DoxyReturn}{Returns}
+The details of the payment station. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_a495f4940ef565fde8456eec37f34b2ce}\label{classPaymentStation_a495f4940ef565fde8456eec37f34b2ce}} 
+\index{PaymentStation@{PaymentStation}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Payment\+Station\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the direction the payment station is facing. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the payment station. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_aa81e8c3547f10a4025e4b0ec18ae5288}\label{classPaymentStation_aa81e8c3547f10a4025e4b0ec18ae5288}} 
+\index{PaymentStation@{PaymentStation}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Payment\+Station\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the position of the payment station. 
+
+\begin{DoxyReturn}{Returns}
+The position of the payment station. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_ae2b4a5d4ad6d59eecd93001319211df3}\label{classPaymentStation_ae2b4a5d4ad6d59eecd93001319211df3}} 
+\index{PaymentStation@{PaymentStation}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Payment\+Station\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the payment station (0). 
+
+\begin{DoxyReturn}{Returns}
+The speed of the payment station. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_a4f30ed5f01ff0305731dc98634ac6485}\label{classPaymentStation_a4f30ed5f01ff0305731dc98634ac6485}} 
+\index{PaymentStation@{PaymentStation}!GetStrategyName@{GetStrategyName}}
+\index{GetStrategyName@{GetStrategyName}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{GetStrategyName()}{GetStrategyName()}}
+{\footnotesize\ttfamily std\+::string Payment\+Station\+::\+Get\+Strategy\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Strategy Name (none) 
+
+\begin{DoxyReturn}{Returns}
+Streategy name (none) 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a14badced4c9d744bcc210cb3c1260ee1}{I\+Entity}}.
+
+\mbox{\Hypertarget{classPaymentStation_a9d526e2136158e06882cefda8b5e1c0c}\label{classPaymentStation_a9d526e2136158e06882cefda8b5e1c0c}} 
+\index{PaymentStation@{PaymentStation}!SetAvailability@{SetAvailability}}
+\index{SetAvailability@{SetAvailability}!PaymentStation@{PaymentStation}}
+\doxysubsubsection{\texorpdfstring{SetAvailability()}{SetAvailability()}}
+{\footnotesize\ttfamily void Payment\+Station\+::\+Set\+Availability (\begin{DoxyParamCaption}\item[{bool}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the availability of the payment station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & The desired availability of the payment station. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/include/Payment\+Station.\+h\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/src/Payment\+Station.\+cc\end{DoxyCompactItemize}

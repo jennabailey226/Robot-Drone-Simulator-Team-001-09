@@ -12,25 +12,40 @@ class RobotWalletDecorator : public IWalletDecorator {
    * @param entity the robot entity to decorate onto
    */
   RobotWalletDecorator(IEntity* entity) : IWalletDecorator(entity) {
-    balance = 20;
+    balance = Random(0, 50);
+    std::cout << "Robot has $" << balance << " in his wallet" << std::endl;
     hasPaid = false;
-    //entity is created in SimulationModel.cc and wrapped in wallet decorator in RobotFactory.cc
-  };
+    needsMoney = false;
+  }
 
     /**
    * @brief Wallet Destructor
    */
   ~RobotWalletDecorator();
   
-  bool getHasPaid() { return hasPaid; }
+  /**
+   * @brief Return whether or not a robot has paid for its trip
+   * @return Boolean whether or not it has paid
+  */
+  bool GetHasPaid() { return hasPaid; }
 
-  bool getNeedsMoney() { return needsMoney; }
+/**
+ * @brief Return whether or not a robot needs money from an ATMDrone
+ * @return Boolean whether or not the robot needs money.
+*/
+  bool GetNeedsMoney() { return needsMoney; }
 
-  void setHasPaid(bool update) { hasPaid = update; } 
+/**
+ * @brief Set whether a robot has paid for its trip
+ * @param update New boolean to set hasPaid to
+*/
+  void SetHasPaid(bool update) { hasPaid = update; } 
 
-  void setNeedsMoney(bool update) { needsMoney = update; }
-
-  //std::string GetStrategyName() const { return entity->GetStrategyName(); }
+/**
+ * @brief Set whether or not a robot needs money from an ATMDrone
+ * @param update New boolean to set needsMoney to
+*/
+  void SetNeedsMoney(bool update) { needsMoney = update; }
 
  protected:
   bool hasPaid;

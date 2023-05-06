@@ -27,14 +27,16 @@ Drone::~Drone() {
 }
 
 void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
-  float minDis = std::numeric_limits<float>::max();
-  for (auto entity : scheduler) {
-    std::string type = entity->GetDetails()["type"];
-    if (entity->GetAvailability() && type.compare("paymentStation") != 0) {
-      float disToEntity = this->position.Distance(entity->GetPosition());
-      if (disToEntity <= minDis ) {
-        minDis = disToEntity;
-        nearestEntity = entity;
+  if (!nearestEntity) {
+    float minDis = std::numeric_limits<float>::max();
+    for (auto entity : scheduler) {
+      std::string type = entity->GetDetails()["type"];
+      if (entity->GetAvailability() && type.compare("robot") == 0) { //modified, was checking not payment station
+        float disToEntity = this->position.Distance(entity->GetPosition());
+        if (disToEntity <= minDis ) {
+          minDis = disToEntity;
+          nearestEntity = entity;
+        }
       }
     }
   }

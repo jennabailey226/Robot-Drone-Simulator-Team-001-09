@@ -17,17 +17,21 @@ class ATMDrone : public Drone {
   //  * @param scheduler Vector containing all the entities in the system
   //  */
   // void Update(double dt, std::vector<IEntity*> scheduler);
-  
+
   /**
    * @brief Gets the nearest robot that needs money in the scheduler
    * @param scheduler Vector containing all the entities in the system
    */
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
+  /**
+   * @brief Gets the robot an ATM drone is delivering money too
+   * @return A pointer to the targeted robot
+  */
   IEntity* GetRobo() { return robo; }
 
-private:
- IEntity* robo = nullptr;
+ private:
+    IEntity* robo = nullptr;
 };
 
 #endif

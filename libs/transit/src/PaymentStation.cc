@@ -4,9 +4,9 @@ PaymentStation::PaymentStation(JsonObject &obj) : details(obj) {
     static std::vector<BankAccount*> bankAccounts;
     accounts = bankAccounts;
     if (bankAccounts.size() == 0) {
-        bankAccounts.push_back(new BankAccount("bank"));
-        bankAccounts.at(0)->deposit(5000000000); 
-        //The world's largest bank has about $4 billion. Our bank has more.
+        AddAccount("National Bank");
+        accounts.at(0)->deposit(10000); 
+        //This is the national bank's account. Economy down bad.
     }
     JsonArray pos(obj["position"]);
     position = {pos[0], pos[1], pos[2]};
@@ -31,6 +31,8 @@ bool PaymentStation::Deposit(float amount, std::string accountName, IWalletDecor
             if (wallet->withdraw(amount)) {
                 account->deposit(amount*0.95);
                 accounts.at(0)->deposit(amount*0.05); //ATM Fee
+                std::cout << "$" << amount*.95 << " deposited into " << accountName << " account" << std::endl;
+                std::cout << "ATM fee of 5% applied. National Bank balance is now $" << accounts.at(0)->GetBalance() << std::endl;
                 return true;
             }
             else {
@@ -49,6 +51,8 @@ bool PaymentStation::Withdraw(float amount, std::string accountName, IWalletDeco
             if (account->withdraw(amount)) {
                 wallet->deposit(amount*0.95);
                 accounts.at(0)->deposit(amount*0.05); //ATM Fee
+                std::cout << "$" << amount*.95 << " withdrawn from " << accountName << " account" << std::endl;
+                std::cout << "ATM fee of 5% applied. National Bank balance is now $" << accounts.at(0)->GetBalance() << std::endl;
                 return true;
             }
             else {

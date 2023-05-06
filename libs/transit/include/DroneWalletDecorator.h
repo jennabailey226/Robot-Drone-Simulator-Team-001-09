@@ -13,13 +13,12 @@ class DroneWalletDecorator : public IWalletDecorator {
    */
   DroneWalletDecorator(IEntity* entity) : IWalletDecorator(entity) {
     balance = 0;
-    //entity is created in Drone.cc and wrapped in wallet decorator in DroneFactory.cc
-  };
+  }
   /**
    * @brief Wallet Destructor
    */
   ~DroneWalletDecorator();
-  
+
   /**
    * @brief Gets the nearest entity in the scheduler
    * @param scheduler Vector containing all the entities in the system
@@ -33,12 +32,12 @@ class DroneWalletDecorator : public IWalletDecorator {
    */
   void Update(double dt, std::vector<IEntity*> scheduler);
 
+  /**
+   * @brief Calculate the cost of a drone trip using beeline distace plus a flat fee
+   * @param start A Vector 3 containing the starting coordinates of the trip
+   * @param end A Vector3 containing the ending coordinates of the trip
+  */
   float TripCost(Vector3 start, Vector3 end);
-
-  IEntity* ReturnNearestEntity() { return entity->ReturnNearestEntity(); }
-
-  void SetNearestEntity(IEntity* nearEntity) { entity->SetNearestEntity(nearEntity); }
-
 };
 
 #endif

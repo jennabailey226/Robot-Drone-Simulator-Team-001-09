@@ -80,14 +80,14 @@ class Drone : public IEntity {
    * @brief Gets the nearest entity in the scheduler
    * @param scheduler Vector containing all the entities in the system
    */
-  void GetNearestEntity(std::vector<IEntity*> scheduler);
+  virtual void GetNearestEntity(std::vector<IEntity*> scheduler);
 
   /**
    * @brief Updates the drone's position
    * @param dt Delta time
    * @param scheduler Vector containing all the entities in the system
    */
-  void Update(double dt, std::vector<IEntity*> scheduler);
+  virtual void Update(double dt, std::vector<IEntity*> scheduler);
 
   /**
    * @brief Sets the position of the drone
@@ -132,16 +132,32 @@ class Drone : public IEntity {
   Drone(const Drone& drone) = delete;
   Drone& operator=(const Drone& drone) = delete;
 
+  /**
+   * @brief Checks whether a drone has arrived at its initial set location
+   * @return Boolean if the drone has arrived at its initial location or not
+  */
   bool AtInitialDestination();
 
+  /**
+   * @brief Checks whether a drone has arrived at its final destination
+   * @return Boolean if the drone has arrived at its final location or not
+  */
   bool AtFinalDestination();
 
+  /**
+   * @brief Get the entity currently set as nearest entity.
+   * @return the entity currently set as nearest self.
+  */
   IEntity* ReturnNearestEntity();
 
+  /**
+   * @brief Allow access to modifying nearest entity by wallet decorators
+   * @param nearEntity The entity to be set as nearest to self.
+  */
   void SetNearestEntity(IEntity* nearEntity);
 
 
- protected:   //Modified from private to allow for interaction with ATMDrones
+ protected:   // Modified from private to allow for interaction with ATMDrones
   JsonObject details;
   Vector3 position;
   Vector3 direction;

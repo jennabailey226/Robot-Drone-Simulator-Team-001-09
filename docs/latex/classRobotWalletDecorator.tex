@@ -1,0 +1,130 @@
+\hypertarget{classRobotWalletDecorator}{}\doxysection{Robot\+Wallet\+Decorator Class Reference}
+\label{classRobotWalletDecorator}\index{RobotWalletDecorator@{RobotWalletDecorator}}
+
+
+Inheritance diagram for Robot\+Wallet\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classRobotWalletDecorator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Robot\+Wallet\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classRobotWalletDecorator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRobotWalletDecorator_ad1f9a6ef5eb41b81e1e783cce0a32caa}{Robot\+Wallet\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRobot}{Robot}} Wallet Decorator object, initializes funds to \$20. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRobotWalletDecorator_a3b4d0cfc9fc83054c9ef2d7f8e49b4ca}\label{classRobotWalletDecorator_a3b4d0cfc9fc83054c9ef2d7f8e49b4ca}} 
+\mbox{\hyperlink{classRobotWalletDecorator_a3b4d0cfc9fc83054c9ef2d7f8e49b4ca}{$\sim$\+Robot\+Wallet\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em Wallet Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRobotWalletDecorator_a091f490d0980d2629ecb7d81b7d9ec80}{Get\+Has\+Paid}} ()
+\begin{DoxyCompactList}\small\item\em Return whether or not a robot has paid for its trip. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRobotWalletDecorator_ae883c90427d5285de8f86777b865f790}{Get\+Needs\+Money}} ()
+\begin{DoxyCompactList}\small\item\em Return whether or not a robot needs money from an \mbox{\hyperlink{classATMDrone}{A\+T\+M\+Drone}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobotWalletDecorator_ae72f1d0c1b7542e1cb8f5960c38872fa}{Set\+Has\+Paid}} (bool update)
+\begin{DoxyCompactList}\small\item\em Set whether a robot has paid for its trip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobotWalletDecorator_a737e9e1c1dc8ac52c7d5e2d8dbabab89}{Set\+Needs\+Money}} (bool update)
+\begin{DoxyCompactList}\small\item\em Set whether or not a robot needs money from an \mbox{\hyperlink{classATMDrone}{A\+T\+M\+Drone}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRobotWalletDecorator_a867f2ae50a966c65978cc9c37d3403d2}\label{classRobotWalletDecorator_a867f2ae50a966c65978cc9c37d3403d2}} 
+bool {\bfseries has\+Paid}
+\item 
+\mbox{\Hypertarget{classRobotWalletDecorator_a96dfdcc1ba62e51f21fbfa1ba3c1c644}\label{classRobotWalletDecorator_a96dfdcc1ba62e51f21fbfa1ba3c1c644}} 
+bool {\bfseries needs\+Money}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRobotWalletDecorator_ad1f9a6ef5eb41b81e1e783cce0a32caa}\label{classRobotWalletDecorator_ad1f9a6ef5eb41b81e1e783cce0a32caa}} 
+\index{RobotWalletDecorator@{RobotWalletDecorator}!RobotWalletDecorator@{RobotWalletDecorator}}
+\index{RobotWalletDecorator@{RobotWalletDecorator}!RobotWalletDecorator@{RobotWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{RobotWalletDecorator()}{RobotWalletDecorator()}}
+{\footnotesize\ttfamily Robot\+Wallet\+Decorator\+::\+Robot\+Wallet\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classRobot}{Robot}} Wallet Decorator object, initializes funds to \$20. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & the robot entity to decorate onto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRobotWalletDecorator_a091f490d0980d2629ecb7d81b7d9ec80}\label{classRobotWalletDecorator_a091f490d0980d2629ecb7d81b7d9ec80}} 
+\index{RobotWalletDecorator@{RobotWalletDecorator}!GetHasPaid@{GetHasPaid}}
+\index{GetHasPaid@{GetHasPaid}!RobotWalletDecorator@{RobotWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{GetHasPaid()}{GetHasPaid()}}
+{\footnotesize\ttfamily bool Robot\+Wallet\+Decorator\+::\+Get\+Has\+Paid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return whether or not a robot has paid for its trip. 
+
+\begin{DoxyReturn}{Returns}
+Boolean whether or not it has paid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRobotWalletDecorator_ae883c90427d5285de8f86777b865f790}\label{classRobotWalletDecorator_ae883c90427d5285de8f86777b865f790}} 
+\index{RobotWalletDecorator@{RobotWalletDecorator}!GetNeedsMoney@{GetNeedsMoney}}
+\index{GetNeedsMoney@{GetNeedsMoney}!RobotWalletDecorator@{RobotWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{GetNeedsMoney()}{GetNeedsMoney()}}
+{\footnotesize\ttfamily bool Robot\+Wallet\+Decorator\+::\+Get\+Needs\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return whether or not a robot needs money from an \mbox{\hyperlink{classATMDrone}{A\+T\+M\+Drone}}. 
+
+\begin{DoxyReturn}{Returns}
+Boolean whether or not the robot needs money. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRobotWalletDecorator_ae72f1d0c1b7542e1cb8f5960c38872fa}\label{classRobotWalletDecorator_ae72f1d0c1b7542e1cb8f5960c38872fa}} 
+\index{RobotWalletDecorator@{RobotWalletDecorator}!SetHasPaid@{SetHasPaid}}
+\index{SetHasPaid@{SetHasPaid}!RobotWalletDecorator@{RobotWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{SetHasPaid()}{SetHasPaid()}}
+{\footnotesize\ttfamily void Robot\+Wallet\+Decorator\+::\+Set\+Has\+Paid (\begin{DoxyParamCaption}\item[{bool}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set whether a robot has paid for its trip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & New boolean to set has\+Paid to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobotWalletDecorator_a737e9e1c1dc8ac52c7d5e2d8dbabab89}\label{classRobotWalletDecorator_a737e9e1c1dc8ac52c7d5e2d8dbabab89}} 
+\index{RobotWalletDecorator@{RobotWalletDecorator}!SetNeedsMoney@{SetNeedsMoney}}
+\index{SetNeedsMoney@{SetNeedsMoney}!RobotWalletDecorator@{RobotWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{SetNeedsMoney()}{SetNeedsMoney()}}
+{\footnotesize\ttfamily void Robot\+Wallet\+Decorator\+::\+Set\+Needs\+Money (\begin{DoxyParamCaption}\item[{bool}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set whether or not a robot needs money from an \mbox{\hyperlink{classATMDrone}{A\+T\+M\+Drone}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & New boolean to set needs\+Money to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/include/Robot\+Wallet\+Decorator.\+h\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/src/Robot\+Wallet\+Decorator.\+cc\end{DoxyCompactItemize}

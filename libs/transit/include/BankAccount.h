@@ -64,7 +64,17 @@ class BankAccount : public IWalletDecorator {
    */
   std::string GetStrategyName() const { return ""; }
 
+  /**
+   * @brief Get the account name of a bank account
+   * @return the account name.
+  */
   std::string GetAccountName() const { return accountName; }
+
+  /**
+   * @brief Get the balance of a bank account
+   * @return The balance of the bank account
+  */
+  float GetBalance() { return balance; }
 
  private:
   std::string accountName;

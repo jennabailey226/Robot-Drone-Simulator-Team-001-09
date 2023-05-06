@@ -36,11 +36,13 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   JsonArray position = entity["position"];
   std::cout << name << ": " << position << std::endl;
 
-  IEntity* myNewEntity;
-
-  myNewEntity = compFactory->CreateEntity(entity);
+  IEntity* myNewEntity = compFactory->CreateEntity(entity);
 
   myNewEntity->SetGraph(graph);
+
+  if (type.compare("paymentStation") == 0) {
+    scheduler.push_back(myNewEntity);
+  }
   
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);

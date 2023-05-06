@@ -1,0 +1,14 @@
+<map id="IEntity" name="IEntity">
+<area shape="rect" id="node1" title="Represents an entity in a physical system." alt="" coords="285,5,349,32"/>
+<area shape="rect" id="node2" href="$classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="20,80,81,107"/>
+<area shape="rect" id="node4" href="$classHelicopter.html" title=" " alt="" coords="106,80,195,107"/>
+<area shape="rect" id="node5" href="$classHuman.html" title=" " alt="" coords="220,80,289,107"/>
+<area shape="rect" id="node6" href="$classIWalletDecorator.html" title=" " alt="" coords="314,80,446,107"/>
+<area shape="rect" id="node11" href="$classPaymentStation.html" title="Represents a payment station in a physical system." alt="" coords="470,80,597,107"/>
+<area shape="rect" id="node12" href="$classRobot.html" title="Represents a robot in a physical system." alt="" coords="621,80,681,107"/>
+<area shape="rect" id="node3" href="$classATMDrone.html" title=" " alt="" coords="5,155,96,181"/>
+<area shape="rect" id="node7" href="$classATMDroneDecorator.html" title=" " alt="" coords="133,155,288,181"/>
+<area shape="rect" id="node8" href="$classBankAccount.html" title="Represents a bank account." alt="" coords="312,155,419,181"/>
+<area shape="rect" id="node9" href="$classDroneWalletDecorator.html" title=" " alt="" coords="443,155,610,181"/>
+<area shape="rect" id="node10" href="$classRobotWalletDecorator.html" title=" " alt="" coords="634,155,801,181"/>
+</map>

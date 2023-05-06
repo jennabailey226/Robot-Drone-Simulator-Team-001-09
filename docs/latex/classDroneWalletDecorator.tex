@@ -1,0 +1,117 @@
+\hypertarget{classDroneWalletDecorator}{}\doxysection{Drone\+Wallet\+Decorator Class Reference}
+\label{classDroneWalletDecorator}\index{DroneWalletDecorator@{DroneWalletDecorator}}
+
+
+Inheritance diagram for Drone\+Wallet\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classDroneWalletDecorator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Drone\+Wallet\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classDroneWalletDecorator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDroneWalletDecorator_a893f6c9b4182ec49e7cadb28c32da1e5}{Drone\+Wallet\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDrone}{Drone}} Wallet Decorator object, initializes funds to \$0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDroneWalletDecorator_a1865565ac56b9334127053e1b5c27001}\label{classDroneWalletDecorator_a1865565ac56b9334127053e1b5c27001}} 
+\mbox{\hyperlink{classDroneWalletDecorator_a1865565ac56b9334127053e1b5c27001}{$\sim$\+Drone\+Wallet\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em Wallet Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDroneWalletDecorator_ad7f4bfd7b38f4c77ae94a087711b7749}{Get\+Nearest\+Entity}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Gets the nearest entity in the scheduler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDroneWalletDecorator_a320b6c53cb93316f481f8c413ed91019}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system, with added functionality from Wallet Decorator. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDroneWalletDecorator_a06c0b286348c26c37eb935dedd50c324}{Trip\+Cost}} (\mbox{\hyperlink{classVector3}{Vector3}} start, \mbox{\hyperlink{classVector3}{Vector3}} end)
+\begin{DoxyCompactList}\small\item\em Calculate the cost of a drone trip using beeline distace plus a flat fee. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDroneWalletDecorator_a893f6c9b4182ec49e7cadb28c32da1e5}\label{classDroneWalletDecorator_a893f6c9b4182ec49e7cadb28c32da1e5}} 
+\index{DroneWalletDecorator@{DroneWalletDecorator}!DroneWalletDecorator@{DroneWalletDecorator}}
+\index{DroneWalletDecorator@{DroneWalletDecorator}!DroneWalletDecorator@{DroneWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{DroneWalletDecorator()}{DroneWalletDecorator()}}
+{\footnotesize\ttfamily Drone\+Wallet\+Decorator\+::\+Drone\+Wallet\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classDrone}{Drone}} Wallet Decorator object, initializes funds to \$0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & the drone entity to decorate onto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDroneWalletDecorator_ad7f4bfd7b38f4c77ae94a087711b7749}\label{classDroneWalletDecorator_ad7f4bfd7b38f4c77ae94a087711b7749}} 
+\index{DroneWalletDecorator@{DroneWalletDecorator}!GetNearestEntity@{GetNearestEntity}}
+\index{GetNearestEntity@{GetNearestEntity}!DroneWalletDecorator@{DroneWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{GetNearestEntity()}{GetNearestEntity()}}
+{\footnotesize\ttfamily void Drone\+Wallet\+Decorator\+::\+Get\+Nearest\+Entity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})}
+
+
+
+Gets the nearest entity in the scheduler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheduler} & Vector containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDroneWalletDecorator_a06c0b286348c26c37eb935dedd50c324}\label{classDroneWalletDecorator_a06c0b286348c26c37eb935dedd50c324}} 
+\index{DroneWalletDecorator@{DroneWalletDecorator}!TripCost@{TripCost}}
+\index{TripCost@{TripCost}!DroneWalletDecorator@{DroneWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{TripCost()}{TripCost()}}
+{\footnotesize\ttfamily float Drone\+Wallet\+Decorator\+::\+Trip\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{start,  }\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{end }\end{DoxyParamCaption})}
+
+
+
+Calculate the cost of a drone trip using beeline distace plus a flat fee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & A Vector 3 containing the starting coordinates of the trip \\
+\hline
+{\em end} & A \mbox{\hyperlink{classVector3}{Vector3}} containing the ending coordinates of the trip \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDroneWalletDecorator_a320b6c53cb93316f481f8c413ed91019}\label{classDroneWalletDecorator_a320b6c53cb93316f481f8c413ed91019}} 
+\index{DroneWalletDecorator@{DroneWalletDecorator}!Update@{Update}}
+\index{Update@{Update}!DroneWalletDecorator@{DroneWalletDecorator}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Drone\+Wallet\+Decorator\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the entity\textquotesingle{}s position in the physical system, with added functionality from Wallet Decorator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time step of the update. \\
+\hline
+{\em scheduler} & The list of all entities in the system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIWalletDecorator_aeb38db0b4227fa43b2b30bbf1e60d37b}{I\+Wallet\+Decorator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/include/Drone\+Wallet\+Decorator.\+h\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/src/Drone\+Wallet\+Decorator.\+cc\end{DoxyCompactItemize}

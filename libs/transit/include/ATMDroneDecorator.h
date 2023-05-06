@@ -14,7 +14,7 @@ class ATMDroneDecorator : public IWalletDecorator {
    * @param entity the ATM Drone entity to decorate onto
    */
   ATMDroneDecorator(IEntity* entity) : IWalletDecorator(entity) {}
-  
+
   /**
    * @brief Wallet Destructor
   */
@@ -26,7 +26,6 @@ class ATMDroneDecorator : public IWalletDecorator {
    * @param scheduler The list of all entities in the system.
    */
   void Update(double dt, std::vector<IEntity*> scheduler);
-
 };
 
 #endif

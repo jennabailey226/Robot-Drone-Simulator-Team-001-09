@@ -1,0 +1,91 @@
+\hypertarget{classATMDrone}{}\doxysection{A\+T\+M\+Drone Class Reference}
+\label{classATMDrone}\index{ATMDrone@{ATMDrone}}
+
+
+Inheritance diagram for A\+T\+M\+Drone\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classATMDrone__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+T\+M\+Drone\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classATMDrone__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classATMDrone_a302940e4d1a849204ba2cc6b63af6326}{A\+T\+M\+Drone}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Drones are created with a name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classATMDrone_a7ae2ceccf7f55c57252c87763827f2fe}{Get\+Nearest\+Entity}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Gets the nearest robot that needs money in the scheduler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classATMDrone_a93336b150bbbbf5a64414899a2f6eab8}{Get\+Robo}} ()
+\begin{DoxyCompactList}\small\item\em Gets the robot an A\+TM drone is delivering money too. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classATMDrone_a302940e4d1a849204ba2cc6b63af6326}\label{classATMDrone_a302940e4d1a849204ba2cc6b63af6326}} 
+\index{ATMDrone@{ATMDrone}!ATMDrone@{ATMDrone}}
+\index{ATMDrone@{ATMDrone}!ATMDrone@{ATMDrone}}
+\doxysubsubsection{\texorpdfstring{ATMDrone()}{ATMDrone()}}
+{\footnotesize\ttfamily A\+T\+M\+Drone\+::\+A\+T\+M\+Drone (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Drones are created with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & J\+S\+ON object containing the drone\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classATMDrone_a7ae2ceccf7f55c57252c87763827f2fe}\label{classATMDrone_a7ae2ceccf7f55c57252c87763827f2fe}} 
+\index{ATMDrone@{ATMDrone}!GetNearestEntity@{GetNearestEntity}}
+\index{GetNearestEntity@{GetNearestEntity}!ATMDrone@{ATMDrone}}
+\doxysubsubsection{\texorpdfstring{GetNearestEntity()}{GetNearestEntity()}}
+{\footnotesize\ttfamily void A\+T\+M\+Drone\+::\+Get\+Nearest\+Entity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the nearest robot that needs money in the scheduler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheduler} & Vector containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classDrone_a21d9dc799ee8a6c10b579fcab401bd57}{Drone}}.
+
+\mbox{\Hypertarget{classATMDrone_a93336b150bbbbf5a64414899a2f6eab8}\label{classATMDrone_a93336b150bbbbf5a64414899a2f6eab8}} 
+\index{ATMDrone@{ATMDrone}!GetRobo@{GetRobo}}
+\index{GetRobo@{GetRobo}!ATMDrone@{ATMDrone}}
+\doxysubsubsection{\texorpdfstring{GetRobo()}{GetRobo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}}$\ast$ A\+T\+M\+Drone\+::\+Get\+Robo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the robot an A\+TM drone is delivering money too. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the targeted robot 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/include/A\+T\+M\+Drone.\+h\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/src/A\+T\+M\+Drone.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classPaymentStationFactory}{}\doxysection{Payment\+Station\+Factory Class Reference}
+\label{classPaymentStationFactory}\index{PaymentStationFactory@{PaymentStationFactory}}
+
+
+\mbox{\hyperlink{classDrone}{Drone}} Factory to produce Drones class.  
+
+
+
+
+{\ttfamily \#include $<$Payment\+Station\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Payment\+Station\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classPaymentStationFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Payment\+Station\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classPaymentStationFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPaymentStationFactory_a0c243944ecd324d8a8556ad9df82d473}\label{classPaymentStationFactory_a0c243944ecd324d8a8556ad9df82d473}} 
+\mbox{\hyperlink{classPaymentStationFactory_a0c243944ecd324d8a8556ad9df82d473}{$\sim$\+Payment\+Station\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classPaymentStationFactory_a7f9ecb74e52fc647ac07936f0e6cb526}{Create\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Creates entity using the given J\+S\+ON object, if possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classDrone}{Drone}} Factory to produce Drones class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPaymentStationFactory_a7f9ecb74e52fc647ac07936f0e6cb526}\label{classPaymentStationFactory_a7f9ecb74e52fc647ac07936f0e6cb526}} 
+\index{PaymentStationFactory@{PaymentStationFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!PaymentStationFactory@{PaymentStationFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Payment\+Station\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates entity using the given J\+S\+ON object, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & -\/ Json\+Object to be used to create the new entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity that was created if it was created successfully, or a nullpointer if creation failed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/include/Payment\+Station\+Factory.\+h\item 
+/home/bail0416/csci3081w/\+Team-\/001-\/09-\/homework4/libs/transit/src/Payment\+Station\+Factory.\+cc\end{DoxyCompactItemize}

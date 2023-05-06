@@ -113,7 +113,7 @@ class IEntity {
    * @brief Sets the graph object used by the entity in the simulation.
    * @param graph The IGraph object to be used.
    */
-  void SetGraph(const IGraph* graph) { this->graph = graph; }
+  virtual void SetGraph(const IGraph* graph) { this->graph = graph; }
 
   /**
    * @brief Sets the position of the entity.
@@ -151,21 +151,42 @@ class IEntity {
    */
   virtual void Jump(double height) {}
 
+  /**
+   * @brief Checks whether a drone has arrived at its initial set location
+   * @return Boolean if the drone has arrived at its initial location or not
+  */
   virtual bool AtInitialDestination() { return false; }
 
+  /**
+   * @brief Checks whether a drone has arrived at its final destination
+   * @return Boolean if the drone has arrived at its final location or not
+  */
   virtual bool AtFinalDestination() { return false; }
 
-  virtual IEntity* ReturnNearestEntity() { return nullptr; };
+  /**
+   * @brief Get the entity currently set as nearest entity.
+   * @return the entity currently set as nearest self.
+  */
+  virtual IEntity* ReturnNearestEntity() { return nullptr; }
 
+  /**
+   * @brief Allow access to modifying nearest entity by wallet decorators
+   * @param nearEntity The entity to be set as nearest to self.
+  */
   virtual void SetNearestEntity(IEntity* nearEntity) {}
 
+  /**
+   * @brief Return a random float between two floating point values
+   * @param Min The lowest possible float that can be selected
+   * @param Max The maximum possible float that can be selected
+  */
   virtual float Random(float Min, float Max) {
-    return ((float(rand()) / float(RAND_MAX)) * (Max - Min)) + Min;
+    return (static_cast<float>(rand()) / float(RAND_MAX) * (Max - Min)) + Min;
   }
 
  protected:
   int id;
-  const IGraph* graph;
+  const IGraph* graph = nullptr;
 };
 
 #endif
